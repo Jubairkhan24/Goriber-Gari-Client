@@ -1,0 +1,38 @@
+[
+    {
+        "id": 543645,
+        "name": "Special yoga class",
+        "img": "https://mindbodygreen-res.cloudinary.com/images/w_767,q_auto:eco,f_auto,fl_lossy/org/tj6vwoadakon47r9c/aq0i4526.png",
+        "info": "A three months special yoga training exercise for a refreshed body and mind"
+    },
+    {
+        "id": 76453645,
+        "name": "Private Training",
+        "img": "https://3.bp.blogspot.com/-vlM7X3vxY4Q/WBM79h8_2WI/AAAAAAAAJ84/OxsXa7-7ah4bZwEXZeBvBLUpvOPs3AtJQCLcB/s1600/Fitness%2BCenter%2Band%2BGym.jpg",
+        "info": "A lifetime exercise for everybody to keep the body fit and good"
+    },
+    {
+        "id": 23645,
+        "name": "Extra Muscle (Biceps) Exercise",
+        "img": "https://manofmany.com/wp-content/uploads/2020/06/best-bicep-exercises.jpg",
+        "info": "One month muscle exercise for bicep and tricep both"
+    },
+    {
+        "id": 33645,
+        "name": "Leg Exercises",
+        "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/06/2-walking-lunge-1109.jpg?quality=86&strip=all",
+        "info": "Two months special leg exercises for leg muscles"
+    },
+    {
+        "id": 13645,
+        "name": "Regular Exercise",
+        "img": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/07/running_at_sunset-1296x728-header.jpg?w=1155&h=1528",
+        "info": "A lifetime exercise for everybody to keep the body fit and good"
+    },
+    {
+        "id": 43645,
+        "name": "Six Pack Abs",
+        "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/08/Guy-Showing-Off-Abs-and-Chest.jpg?w=1109&h=614&crop=1&quality=86&strip=all",
+        "info": "A three months special exercises for six pack abs"
+    }
+]

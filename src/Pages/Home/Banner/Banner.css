@@ -1,0 +1,33 @@
+.background-banner {
+    background-image: url(../../../images/products/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    color: white;
+}
+.common-color-theme {
+    color: #0f8c9c;
+}
+.home-text-style {
+    padding-top: 210px;
+}
+.btn-design-banner {
+    font-size: 20px;
+    color: white;
+    background-color: #0f8c9c;
+    margin-left: 35px;
+    transition: 0.5s;
+} 
+.btn-design-banner:hover {
+    color: #0f8c9c;
+    background-color: transparent;
+    border: 2px solid white;
+    
+}
+
+@media only screen and (max-width:688px) {
+    .background-banner{
+        width: 100%;
+        background-size: cover;
+    }
+}
