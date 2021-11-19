@@ -6,11 +6,17 @@ import Typography from '@mui/material/Typography';
 import "./ManageAllOrder.css"
 
 const ManageAllOrder = props => {
-    const { name, email, address, number } = props.order;
+    const { name, email, address, number, productName } = props.order;
     return (
         <div>
             <div class="row g-2 ">
                 <div class="col-md d-flex">
+                    <div></div>
+                    <input type="email"
+                        class="form-control"
+                        id="floatingInputGrid"
+                        disabled
+                        defaultValue={productName} />
                     <input type="email"
                         class="form-control"
                         id="floatingInputGrid"

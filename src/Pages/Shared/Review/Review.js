@@ -10,7 +10,7 @@ const Review = (props) => {
     console.log(props.review)
     return (
         <Grid item xs={4} sm={4} md={4}>
-            <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }} style={{ backgroundColor: '#192230', borderRadius: '5px' }}>
+            <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }} style={{ backgroundColor: '#192230', borderRadius: '20px' }}>
                 <CardContent >
                     <Typography variant="h5" component="div" style={{ fontWeight: '600', color: '#0f8c9c', margin: '30px' }}>
                         {name}

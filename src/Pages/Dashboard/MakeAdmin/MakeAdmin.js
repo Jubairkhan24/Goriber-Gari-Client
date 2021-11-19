@@ -35,13 +35,15 @@ const MakeAdmin = () => {
         <div>
             <h2>Make an Admin</h2>
             <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    sx={{ width: '50%' }}
-                    label="Email"
-                    type="email"
-                    onBlur={handleOnBlur}
-                    variant="standard" />
-                <Button type="submit" variant="contained">Make Admin</Button>
+                <div>
+                    <TextField
+                        sx={{ width: '50%' }}
+                        label="Email"
+                        type="email"
+                        onBlur={handleOnBlur}
+                        variant="standard" />
+                </div>
+                <Button className="my-5" type="submit" variant="contained">Make Admin</Button>
             </form>
             {success && <Alert severity="success">A new  Admin added successfully!</Alert>}
         </div>

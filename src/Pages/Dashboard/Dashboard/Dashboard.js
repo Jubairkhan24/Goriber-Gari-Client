@@ -33,6 +33,7 @@ import './Dashboard.css'
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import ManageServices from '../ManageServices/ManageServices';
 import './Dashboard.css'
+import MyOrders from '../MyOrders/MyOrders';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -58,12 +59,13 @@ function Dashboard(props) {
                 :
                 <Box>
                     <Link className="dashboard-button-style" to={`${url}`}><Button color="inherit" className="dashboard-button-style">Goriber Gari</Button></Link>
+                    <Link className="dashboard-button-style" to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
                     <Link className="dashboard-button-style" to={`${url}/AddReview`}><Button color="inherit">Add Review</Button></Link>
                     <Link className="dashboard-button-style" to={`${url}/payment`}><Button color="inherit">Payment Method</Button></Link>
                 </Box>
             }
-            <Link className="dashboard-button-style" to={`/home`}><Button color="inherit">Back to Home Page</Button></Link>
-            <Button onClick={logout} className="btn-outline-secondary" color="inherit">Logout</Button>
+            <Link className=" dashboard-button-style" to={`/home`}><Button color="inherit">Back to Home Page</Button></Link>
+            <Button onClick={logout} className="btn-design-log" color="inherit">Logout</Button>
             {/* <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
@@ -162,6 +164,9 @@ function Dashboard(props) {
                     </Route>
                     <Route path={`${path}/addReview`}>
                         <AddReview></AddReview>
+                    </Route>
+                    <Route path={`${path}/myOrders`}>
+                        <MyOrders></MyOrders>
                     </Route>
                     <Route path={`${path}/home`}>
                         <Home></Home>

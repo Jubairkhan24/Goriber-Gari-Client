@@ -25,8 +25,8 @@ const Service = (props) => {
                         {description}
                     </Typography>
 
-                    <Link className="btn-style d-flex justify-content-center" to={`userOrder/${_id}`}>
-                        <button className="btn btn-design text-center">Purchage</button>
+                    <Link className="btn-style btn-design d-flex justify-content-center" to={`userOrder/${_id}`}>
+                        <button className="btn  text-center">Purchage</button>
                     </Link>
                 </CardContent>
 

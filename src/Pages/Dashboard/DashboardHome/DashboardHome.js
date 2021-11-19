@@ -6,18 +6,12 @@ import * as React from 'react';
 const DashboardHome = () => {
     // const [date, setDate] = React.useState(new Date())
     return (
-        <h2>this is dashboard home</h2>
-        // <Grid container spacing={2}>
-        //     <Grid item xs={12} sm={5}>
-        //         <Calendar
-        //             date={date}
-        //             setDate={setDate}
-        //         ></Calendar>
-        //     </Grid>
-        //     <Grid item xs={12} sm={7}>
-        //         <Appointments date={date}></Appointments>
-        //     </Grid>
-        // </Grid>
+        <div>
+            <h2>Goriber garir Garage  dashboard</h2>
+            <p></p>
+        </div>
+
+
     );
 };
 

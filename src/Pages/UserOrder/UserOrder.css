@@ -9,5 +9,12 @@
     margin-bottom: 10px;
 }
 .btn-design {
-    background-color: blue;
+    background-color: #0F8C9C;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+.btn-design button {
+    color: white;
 }

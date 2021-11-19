@@ -34,8 +34,8 @@ const Item = ({ item, date, setBookingSuccess }) => {
                         <Typography variant="h6" color="">
                             {price}
                         </Typography>
-                        <Link className="btn-style d-flex justify-content-center" to={`userOrder/${_id}`}>
-                            <button className="btn btn-design text-center">Purchage</button>
+                        <Link className="btn-style btn-design d-flex justify-content-center" to={`userOrder/${_id}`}>
+                            <button className="btn text-center">Purchage</button>
                         </Link>
                     </CardContent>
                 </Card>

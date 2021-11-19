@@ -46,6 +46,7 @@ const UserOrder = () => {
                         <h4 style={{ color: '#0F8C9C' }}>Price: {service.price}$</h4>
                         <div className="add-service">
                             <form onSubmit={handleSubmit(onSubmit)}>
+                                <input {...register("productName", { required: true, maxLength: 20 })} placeholder="Name" defaultValue={service.name} />
                                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" defaultValue={user.displayName} />
                                 <input  {...register("email")} defaultValue={user.email} placeholder="email" />
                                 <textarea {...register("address")} placeholder="Your address" />
