@@ -25,7 +25,6 @@ import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from './../../../hooks/useAuth';
-// import AdminRoute from './../../Login/AdminRoute/AdminRoute';
 import Home from '../../Home/Home/Home';
 import AddService from '../../AddService/AddService';
 import Payment from '../../Shared/Payment/Payment';
@@ -33,7 +32,7 @@ import AddReview from '../../Shared/AddReview/AddReview';
 import './Dashboard.css'
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import ManageServices from '../ManageServices/ManageServices';
-
+import './Dashboard.css'
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -49,26 +48,22 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            {/* <Link to={`${url}`}><Button color="inherit">Goriber Gari</Button></Link> */}
-
-
-            {/* <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link> */}
             {admin ? <Box>
-                <Link classNameName="dashboard-button-style" to={`${url}`}><Button color="inherit">Goriber Gari</Button></Link>
-                <Link classNameName="dashboard-button-style" to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
-                <Link classNameName="dashboard-button-style" to={`${url}/addService`}><Button color="inherit">Add Services</Button></Link>
-                <Link classNameName="dashboard-button-style" to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                <Link classNameName="dashboard-button-style" to={`${url}/manageServices`}><Button color="inherit">Manage Services</Button></Link>
+                <Link className="dashboard-button-style" to={`${url}`}><Button color="inherit">Goriber Gari</Button></Link>
+                <Link className="dashboard-button-style" to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
+                <Link className="dashboard-button-style" to={`${url}/addService`}><Button color="inherit">Add Services</Button></Link>
+                <Link className="dashboard-button-style" to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                <Link className="dashboard-button-style" to={`${url}/manageServices`}><Button color="inherit">Manage Services</Button></Link>
             </Box>
                 :
                 <Box>
-                    <Link classNameName="dashboard-button-style" to={`${url}`}><Button color="inherit" classNameName="dashboard-button-style">Goriber Gari</Button></Link>
-                    <Link classNameName="dashboard-button-style" to={`${url}/AddReview`}><Button color="inherit">Add Review</Button></Link>
-                    <Link classNameName="dashboard-button-style" to={`${url}/payment`}><Button color="inherit">Payment Method</Button></Link>
+                    <Link className="dashboard-button-style" to={`${url}`}><Button color="inherit" className="dashboard-button-style">Goriber Gari</Button></Link>
+                    <Link className="dashboard-button-style" to={`${url}/AddReview`}><Button color="inherit">Add Review</Button></Link>
+                    <Link className="dashboard-button-style" to={`${url}/payment`}><Button color="inherit">Payment Method</Button></Link>
                 </Box>
             }
-            <Link classNameName="dashboard-button-style" to={`/home`}><Button color="inherit">Back to Home Page</Button></Link>
-            <Button onClick={logout} color="inherit">Logout</Button>
+            <Link className="dashboard-button-style" to={`/home`}><Button color="inherit">Back to Home Page</Button></Link>
+            <Button onClick={logout} className="btn-outline-secondary" color="inherit">Logout</Button>
             {/* <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>

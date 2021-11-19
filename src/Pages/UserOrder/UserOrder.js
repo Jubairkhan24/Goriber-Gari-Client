@@ -3,45 +3,55 @@ import { useParams } from 'react-router-dom';
 import Navigation from '../Shared/Navigation/Navigation';
 import useAuth from '../../hooks/useAuth';
 import './UserOrder.css'
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const UserOrder = () => {
     const { serviceId } = useParams();
     const { user } = useAuth();
 
+    const { register, handleSubmit, reset } = useForm();
+
+    const onSubmit = data => {
+        console.log(data);
+        axios.post('https://lit-mountain-50683.herokuapp.com/orders', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('purchaged successfully')
+                    reset()
+                }
+                console.log(res)
+            })
+    }
+
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://lit-mountain-50683.herokuapp.com/services/${serviceId}`)
             .then((res) => res.json())
             .then((data) => setService(data));
     }, []);
 
-    const handlePurchageSubmit = e => {
-        alert('purchaged successfully');
-        e.preventDefault()
-        e.target.reset()
-    }
 
     const [service, setService] = useState({});
     return (
         <div>
             <Navigation></Navigation>
-            {/* <h2>this is course: {serviceId}</h2> */}
             <div className="container my-5">
                 <div className="row">
                     <div className="col">
-                        <img clasNameName="img-fluid" src={service.img} alt="" />
+                        <img className="img-fluid" src={service.img} alt="" />
                     </div>
-                    <div className="col" style={{}}>
+                    <div className="col">
                         <h2 style={{ color: '#0F8C9C' }}>{service.name}</h2>
                         <p style={{ fontWeight: '900' }}>{service.description}</p>
                         <h4 style={{ color: '#0F8C9C' }}>Price: {service.price}$</h4>
                         <div className="add-service">
-                            {/* <h2>Here an Admin can add new Products</h2> */}
-                            <form onSubmit={handlePurchageSubmit}>
-                                <input placeholder="Name" disabled defaultValue={user.displayName} />
-                                <textarea placeholder="Email" disabled defaultValue={user.email} />
-                                <input placeholder="Address" />
-                                <input type="number" placeholder="Number" />
-                                <input className="btn-design" type="submit" />
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" defaultValue={user.displayName} />
+                                <input  {...register("email")} defaultValue={user.email} placeholder="email" />
+                                <textarea {...register("address")} placeholder="Your address" />
+                                <input type="number" {...register("number")} placeholder="phone number" />
+
+                                <input type="submit" />
                             </form>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ const ExploreItems = () => {
     const [exploreItems, setExploreItems] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://lit-mountain-50683.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setExploreItems(data))
     }, [])

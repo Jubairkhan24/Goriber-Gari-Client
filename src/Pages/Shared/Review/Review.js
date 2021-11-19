@@ -3,10 +3,10 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-// import { Link } from 'react-router-dom';
+import Rating from '@mui/material/Rating';
 
 const Review = (props) => {
-    const { name, description, price } = props.review;
+    const { name, description, price, value } = props.review;
     console.log(props.review)
     return (
         <Grid item xs={4} sm={4} md={4}>
@@ -21,6 +21,7 @@ const Review = (props) => {
                     <Typography variant="body2" color="" style={{ fontWeight: '900', color: '#0f8c9c', margin: '15px' }}>
                         Rating: {price}
                     </Typography>
+                    <Rating name="size-medium" defaultValue={price} />
                 </CardContent>
 
             </Card>
