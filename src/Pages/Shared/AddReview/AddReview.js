@@ -2,8 +2,6 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Rating from '@mui/material/Rating';
-import Box from '@mui/material/Box';
-import StarIcon from '@mui/icons-material/Star';
 import './AddReview.css'
 import useAuth from '../../../hooks/useAuth';
 import { Typography } from '@mui/material';
@@ -35,8 +33,7 @@ const AddReview = () => {
 
                     <input  {...register("img")} defaultValue={user.email} placeholder="email" />
                     <textarea {...register("description")} placeholder="Your Review" />
-
-
+                    <input type="number" {...register("rating")} placeholder="rating 5 out of...." />
                     {/* <Rating name="size-medium" defaultValue={2} /> */}
                     <Typography component="legend">Rating</Typography>
                     <Rating

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 
 const Review = (props) => {
-    const { name, description, price, value } = props.review;
+    const { name, description, price } = props.review;
     console.log(props.review)
     return (
         <Grid item xs={4} sm={4} md={4}>
