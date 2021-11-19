@@ -11,16 +11,16 @@ const Navigation = () => {
         <>
             <Navbar style={{ backgroundColor: 'f2f2f2' }} collapseOnSelect expand="lg" >
                 <Container className="common-text-color">
-                    <Navbar.Brand className="common-text-color" href="#home">Goriber Gari</Navbar.Brand>
+                    <Navbar.Brand className="common-text-color" as={HashLink} to="/home#home">Goriber Gari</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link className="common-text-color" as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link
-                            className="common-text-color" as={HashLink} to="/home#services">Products</Nav.Link>
+                            className="common-text-color" as={HashLink} to="/home#products">Products</Nav.Link>
                         <Nav.Link
-                            className="common-text-color" as={HashLink} to="/home#membership">Join Us</Nav.Link>
-                        <Nav.Link
-                            className="common-text-color" as={HashLink} to="/home#trainers">Our Trainers</Nav.Link>
+                            className="common-text-color" as={HashLink} to="/home#aboutUs">About Us</Nav.Link>
+                        {/* <Nav.Link
+                            className="common-text-color" as={HashLink} to="/home#trainers">Our Trainers</Nav.Link> */}
                         <Nav.Link as={HashLink} to="/exploreItems"><Button color="inherit">Garage</Button></Nav.Link>
                         {
                             user?.email ?
@@ -28,7 +28,7 @@ const Navigation = () => {
                                     <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
                                         <Button color="inherit">Dashboard</Button>
                                     </NavLink>
-                                    <Button onClick={logout} color="inherit">Logout</Button>
+                                    <Button style={{ marginLeft: '15px' }} onClick={logout} color="inherit">Logout</Button>
                                 </Box>
                                 :
                                 <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
