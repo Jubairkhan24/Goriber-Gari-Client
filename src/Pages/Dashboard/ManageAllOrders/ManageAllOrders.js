@@ -29,7 +29,6 @@ const ManageAllOrders = () => {
                         <input type="text" disabled defaultValue="email" />
                         <input type="text" disabled defaultValue="address" />
                         <input type="text" disabled defaultValue="phone number" />
-                        {/* <h2>this is editable comment</h2> */}
                     </div>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {
